@@ -26,16 +26,6 @@ Calculator.prototype.divide = function(num1, num2) {
 exports.calculatorModule = Calculator;
 
 },{}],2:[function(require,module,exports){
-function Card(cardNumber) {
-  this.cardNumber = cardNumber;
-}
-
-
-
-
-exports.cardModule = Card;
-
-},{}],3:[function(require,module,exports){
 function Journal(title, body) {
   this.title = title;
   this.body = body;
@@ -84,7 +74,7 @@ Journal.prototype.getTeaser = function(body) {
 
 exports.journalModule = Journal;
 
-},{}],4:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 var Calculator = require('./../js/calculator.js').calculatorModule;
 
 $( document ).ready(function() {
@@ -107,54 +97,6 @@ $( document ).ready(function() {
   });
 });
 
-var Card = require('./../js/card.js').cardModule;
-
-var cardArray = [1,1,2,2,3,3,4,4];
-function shuffle(a) {
-  var j, x, i;
-  for (i = a.length; i; i--) {
-      j = Math.floor(Math.random() * i);
-      x = a[i - 1];
-      a[i - 1] = a[j];
-      a[j] = x;
-  }
-  return cardArray;
-}
-
-function Matched(firstCard, otherCard) {
-  if (firstCard !== otherCard) {
-    $('[name="' + firstCard + '"]').hide();
-    $('[name="' + otherCard + '"]').hide();
-  }
-}
-
-$( document ).ready(function() {
-  shuffle(cardArray);
-
-  for(var i=0; i<cardArray.length; i++) {
-    $('#card' + i.toString()).attr('name', cardArray[i]);
-    $('#card' + i.toString()).append("<img class='card-front' src=./img/" + $('#card' + i.toString()).attr('name') + ".jpg />");
-    var myCard = new Card($('#card' + i.toString()).attr('name'));
-    console.log(myCard);
-  }
-
-  $(".card-div").click(function() {
-    var firstCard;
-    var otherCard;
-    var flipCount = 0;
-    if(flipCount < 1) {
-      $(this).children().children().show();
-      firstCard = $(this).attr('name');
-      flipCount += 1;
-    } else {
-      $(this).children().children().show();
-      otherCard = $(this).attr('name');
-      flipCount = 0;
-    }
-    Matched(firstCard, otherCard);
-  });
-});
-
 var Journal = require('./../js/journal.js').journalModule;
 
 
@@ -172,4 +114,8 @@ $(document).ready(function () {
   });
 });
 
-},{"./../js/calculator.js":1,"./../js/card.js":2,"./../js/journal.js":3}]},{},[4]);
+$(document).ready(function () {
+  $('#time').text(moment().seconds());
+});
+
+},{"./../js/calculator.js":1,"./../js/journal.js":2}]},{},[3]);

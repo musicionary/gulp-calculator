@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/calculator.js"></script>
-    <script type="text/javascript" src="js/calculator-interface.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
     <title>Calculator</title>
   </head>
   <body>
-    <form id="calculator-form">
-      <label for="num1">First Number</label>
-      <input id="num1" type="number" name="num1">
-      <label for="num2">Second Number</label>
-      <input id="num2" type="number" name="num2">
-      <select id="operation" name="operation">
-        <option id='add' name="add">add</option>
-        <option id='subtract' name="subtract">subtract</option>
-        <option id='multiply' name="multiply">multiply</option>
-        <option id='divide' name="divide">divide</option>
-      </select>
-      <button type="submit" name="button">Math It!</button>
-    </form>
-    <ul id="solution"></ul>
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Calculator</h1>
+        <form id="calculator-form">
+          <label for="num1">First Number</label>
+          <input id="num1" type="number" name="num1">
+          <label for="num2">Second Number</label>
+          <input id="num2" type="number" name="num2">
+          <select id="operation" name="operation">
+            <option id='add' name="add">add</option>
+            <option id='subtract' name="subtract">subtract</option>
+            <option id='multiply' name="multiply">multiply</option>
+            <option id='divide' name="divide">divide</option>
+          </select>
+          <button type="submit" name="button">Math It!</button>
+        </form>
+        <ul id="solution"></ul>
+      </div>
+      <div class="col-sm-6">
+        <h1>Math Journal</h1>
+        <form id="journal-form">
+          <label for="title">Entry Title</label>
+          <input id="title" type="text" name="title"><br>
+          <label for="body">Notes</label>
+          <textarea id="body" type="text" name="body" style="overflow:auto;resize:none" rows="5" cols="40"></textarea>
+          <button type="submit" name="button">Create Note</button>
+        </form>
+        <div id="post_entry">
+        </div>
+      </div>
+    </div>
   </body>
 </html>

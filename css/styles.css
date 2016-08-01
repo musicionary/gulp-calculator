@@ -1,0 +1,17 @@
+.memory {
+  margin-top: 100px;
+}
+
+.card-div{
+  background-image: url("../img/card-back.jpg");
+  height: 366px;
+  width: 250px;
+  margin: 20px;
+}
+
+.card-front {
+  display: none;
+  height: 366px;
+  width: 250px;
+  margin-left: -15px;
+}

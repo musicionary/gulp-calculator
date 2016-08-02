@@ -7,38 +7,56 @@
     <title>Calculator</title>
   </head>
   <body>
+    <nav class="navbar">
+      <ul class="nav nav-tabs">
+        <li><a href="index.html">Math Journal</a></li>
+        <li><a href="weather.html">Check Weather</a></li>
+      </ul>
+    </nav>
     <div class="jumbotron">
       <h3 class="text-center">Well look at the time!</h3>
       <h3 id="time" class="text-center"></h3>
     </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <h1>Calculator</h1>
-        <form id="calculator-form">
-          <label for="num1">First Number</label>
-          <input id="num1" type="number" name="num1">
-          <label for="num2">Second Number</label>
-          <input id="num2" type="number" name="num2">
-          <select id="operation" name="operation">
-            <option id='add' name="add">add</option>
-            <option id='subtract' name="subtract">subtract</option>
-            <option id='multiply' name="multiply">multiply</option>
-            <option id='divide' name="divide">divide</option>
-          </select>
-          <button type="submit" name="button">Math It!</button>
-        </form>
-        <ul id="solution"></ul>
-      </div>
-      <div class="col-sm-6">
-        <h1>Math Journal</h1>
-        <form id="journal-form">
-          <label for="title">Entry Title</label>
-          <input id="title" type="text" name="title"><br>
-          <label for="body">Notes</label>
-          <textarea id="body" type="text" name="body" style="overflow:auto;resize:none" rows="5" cols="30"></textarea>
-          <button type="submit" name="button">Create Note</button>
-        </form>
-        <div id="post_entry">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Calculator</h1>
+          <form id="calculator-form">
+            <div class="form-group">
+              <label for="num1">First Number</label>
+              <input id="num1" type="number" name="num1" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="num2">Second Number</label>
+              <input id="num2" type="number" name="num2" class="form-control">
+            </div>
+            <div class="form-group">
+              <select id="operation" name="operation">
+                <option id='add' name="add">add</option>
+                <option id='subtract' name="subtract">subtract</option>
+                <option id='multiply' name="multiply">multiply</option>
+                <option id='divide' name="divide">divide</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-default" name="button">Math It!</button>
+          </form>
+          <ul id="solution"></ul>
+        </div>
+        <div class="col-sm-6">
+          <h1>Math Journal</h1>
+          <form id="journal-form">
+            <div class="form-group">
+              <label for="title">Entry Title</label>
+              <input id="title" type="text" name="title" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="body">Notes</label>
+              <textarea id="body" type="text" name="body" style="overflow:auto;resize:none" rows="5" cols="30" class="form-control"></textarea>
+            </div>
+            <button type="submit" name="button" class="btn btn-info">Create Note</button>
+          </form>
+          <div id="post_entry">
+          </div>
         </div>
       </div>
     </div>

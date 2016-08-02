@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <title>Weather</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav nav-tabs">
+        <li><a href="index.html">Math Journal</a></li>
+        <li><a href="weather.html">Check Weather</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Get Weather Conditions From Anywhere!</h1>
+          <div class="form-group">
+            <label for="location">Enter a location:</label>
+            <input id="location" type="text" class="form-control">
+          </div>
+          <button class="btn btn-primary" id="weatherLocation">Get Current Humidity!</button>
+        </div>
+        <div class="col-sm-6">
+          <div class="showWeather"></div>
+        </div>
+        <div class="col-sm-6">
+          <h1>Get Weather Conditions from your current location!</h1>
+          <button class="btn btn-warning" id="weatherCoordinates">Get Your Location's Weather!</button>
+        </div>
+        <div class="col-sm-6">
+          <div class="current-location-weather"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
